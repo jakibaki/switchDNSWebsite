@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+URL: <input type="text" id="myText" value="https://google.com">
+
+<button onclick="myFunction()">Go</button>
+
+<br>
+<a href=exploit.html>Currently pretty useless (for the end-user) exploit</a>
+<br>
+<a href=https://github.com/LiveOverflow/lo_nintendoswitch>Github</a>
+<br>
+<a href=exploit2.html>Other implementation of the same exploit</a>
+<br>
+<a href=https://github.com/Mimoja/CVE-2016-4657-NintendoSwitch>Github</a>
+<br>
+<a href=http://switchkaku.xyz>Switchkaku: like Henkaku but for switch, WIP! (totally real!!!)</a>
+<script>
+function myFunction() {
+    var start = document.getElementById("myText").value;
+    start = start.substr(0, 4);
+    if(start != "http"){
+        window.location.href = "http://" + document.getElementById("myText").value;
+    } else {
+        window.location.href = document.getElementById("myText").value;
+    }
+}
+</script>
+
+</body>
+</html>
+
